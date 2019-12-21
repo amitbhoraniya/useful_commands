@@ -2,7 +2,7 @@
 
 ## Install Nginx Server
 
-```
+```shell
 $ sudo yum install epel-release && yum install nginx   [On CentOS/RHEL]
 $ sudo dnf install nginx                               [On Debian/Ubuntu]
 $ sudo apt install nginx                               [On Fedora]
@@ -38,49 +38,49 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 ## Start Nginx Service
 
-```
+```shell
 $ sudo systemctl start nginx                     [systemd]
 $ sudo service nginx start                       [sysvinit]
 ```
 
 ## Enable Nginx Service
 
-```
+```shell
 $ sudo systemctl enable nginx                     [systemd]
 $ sudo service nginx enable                       [sysvinit]
 ```
 
 ## Restart Nginx Service
 
-```
+```shell
 $ sudo systemctl restart nginx                     [systemd]
 $ sudo service nginx restart                       [sysvinit]
 ```
 
 ## View Service Status
 
-```
+```shell
 $ sudo systemctl status nginx                     [systemd]
 $ sudo service nginx status                       [sysvinit]
 ```
 
 ## Reload Nginx Service
 
-```
+```shell
 $ sudo systemctl reload nginx                     [systemd]
 $ sudo service nginx reload                       [sysvinit]
 ```
 
 ## Stop Nginx Service
 
-```
+```shell
 $ sudo systemctl stop nginx                     [systemd]
 $ sudo service nginx stop                       [sysvinit]
 ```
 
 ## Controlling NGINX
 
-```
+```shell
 nginx -s <SIGNAL>
 ```
 
@@ -123,16 +123,16 @@ Where <SIGNAL> can be one of the following:
 
 It may be cause of SELinux, below solution may workout for you.
 
-```
+```shell
 setsebool httpd_can_network_connect on
 ```
 
 To make the change persist use the -P flag.
-```
+```shell
 setsebool httpd_can_network_connect on -P
 ```
 
 You can see a list of all available SELinux booleans for httpd using
-```
+```shell
 getsebool -a | grep httpd
 ```
