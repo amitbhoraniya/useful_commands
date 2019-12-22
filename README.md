@@ -4,4 +4,4 @@
 + [PM2 Commands](pm2.md)
 + [Nginx Commands](nginx.md)
 + Python
-    + [Numpy](python/numpy.ipynb)
+    + [Numpy](python/numpy/README.md)
