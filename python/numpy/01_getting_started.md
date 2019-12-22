@@ -1,9 +1,13 @@
 # Numpy
 
-  ## Install
+## Install
 
 
-```python
+```
+#Terminal
+pip3 install numpy --upgrade
+
+#Jupyter Notebook
 !pip3 install numpy --upgrade
 ```
 
